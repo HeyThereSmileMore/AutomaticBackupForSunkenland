@@ -17,10 +17,10 @@ jobs:
           architecture: 'x64'
       - name: Install requirements
         run: |
-          pip install -r requirements.txt
-      - name: Run PyInstaller
+          pip install -r requirements.txt pyinstaller
+      - name: Run pyinstaller
         run: |
-          python -m PyInstaller main.spec
+          python -m pyinstaller main.spec
       - uses: actions/upload-artifact@v2
         with:
           name: AutomaticBackupForSunkenland
