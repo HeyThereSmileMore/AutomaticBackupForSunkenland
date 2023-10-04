@@ -103,7 +103,7 @@ def backup_game_save(backup_folder_characters, backup_folder_worlds):
 def is_game_running():
     """Function to check if the game process is running"""
     for process in psutil.process_iter(attrs=["pid", "name"]):
-        if "sunkenland.exe" in process.info["name"].lower():
+        if process.info["name"].lower() == "sunkenland.exe":
             print("The game is currently running")
             return True
     print("The game is not running")
