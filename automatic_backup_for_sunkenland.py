@@ -3,6 +3,8 @@
 If you execute this program, it will check for a "config.toml" file in the current directory. If there is no config file present,
 it will create one. If needed, edit the config file and execute the program again.
 If Sunkenland is closed after playing, it will create a backup of Sunkenland
+
+Python version 3.11 or higher is required to run this script, because "tomllib" was introduced in 3.11
 """
 import os
 import shutil
